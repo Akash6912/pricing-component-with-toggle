@@ -1,0 +1,275 @@
+
+/* General Settings */
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-align: center;
+  padding-top: 50px;
+  color: hsl(233, 13%, 49%);
+  background-color: hsl(240, 78%, 98%);
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.bg-top {
+  width: 23%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bg-bottom {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 23%;
+
+}
+/* Toggle Button */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 30px;
+  margin: 0 25px;
+  top: 15px;
+}
+
+.switch:hover {
+  opacity: 0.5;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+input:checked + .slider {
+  background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+
+
+input:focus + .slider {
+  box-shadow: 0 0 1px white;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 80px;
+}
+
+.slider.round:before {
+  border-radius: 70%;
+}
+
+.toggle-switch {
+  display: flex;
+  margin-left: 625px;
+  color: hsl(234, 14%, 74%);
+}
+
+/* Pricing */
+
+.row {
+  display: flex;
+  padding: 40px 205px 38px;
+}
+
+.basic-box, .master-box {
+  padding: 15px 70px 60px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 8px hsl(240, 78%, 98%);
+  height: 325px;
+  position: relative;
+  top: 20px;
+  background-color: white;
+}
+
+.basic-box {
+  left: 5px;
+}
+
+.master-box {
+  right: 5px;
+}
+
+.professional-box {
+  position: relative;
+  padding: 50px 70px;
+  background-color: hsl(237, 63%, 64%);
+  opacity: 0.75;
+  color: white;
+  border-radius: 8px;
+  height: 345px;
+  z-index: +1;
+}
+
+.professional-box .price {
+  color: white;
+}
+
+.price {
+  font-size: 60px;
+  margin: 0;
+  color: hsl(232, 13%, 33%);
+}
+
+.basic-toggle, .master-toggle {
+  padding: 15px 90px 60px;
+}
+
+.professional-toggle {
+  padding: 50px 90px;
+}
+
+hr {
+  border-style: none;
+  border-top-style: solid;
+  color: hsl(234, 14%, 74%);
+}
+
+button {
+  width: 100%;
+  padding: 12px 0;
+  margin: 25px 0 ;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  color: white;
+  background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+  border: none;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-image: linear-gradient(white,white);
+  border: 1px solid  black;
+  color: hsl(237, 63%, 64%);
+}
+
+.professional-box button {
+  background-image: linear-gradient(white,white);
+  color: hsl(237, 63%, 64%);
+}
+
+.professional-box button:hover {
+  background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+  color: white;
+  border: 1px solid white;
+}
+/* Footer */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media (max-width: 500px) {
+
+
+  body {
+    padding-top: 25px;
+  }
+
+  h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+
+  .bg-top {
+    width: 100%;
+    top: -40px;
+    right: -200px;
+  }
+
+  .bg-bottom {
+    display: none;
+  }
+
+  .toggle-switch {
+    margin-left: 50px;
+    color: hsl(234, 14%, 74%);
+  }
+
+  .pricing {
+    padding: 0 10px 20px;
+  }
+
+  .row {
+    display: block;
+    padding: 0;
+  }
+
+  .basic-box, .master-box, .professional-box {
+    padding: 15px 40px 60px;
+    height: 325px;
+    top: 50px;
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .basic-box {
+    left: 0px;
+  }
+
+  .master-box {
+    right: 0px;
+    top: 100px;
+  }
+
+  .professional-box {
+    z-index: 0;
+    box-shadow: 0 0 25px 2px hsl(234, 14%, 90%);
+    width: 75%;
+    margin: 0 auto;
+    top: 75px;
+  }
+
+  .attribution {
+    margin-top: 150px;
+  }
+}
